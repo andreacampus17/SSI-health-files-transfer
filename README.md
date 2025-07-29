@@ -79,8 +79,8 @@ Per avviare l'intero ecosistema in locale, segui questi passaggi:
 1.  **Clona il repository:**
 
     ```bash
-    git clone <URL_del_tuo_repository>
-    cd <nome_della_cartella_principale_del_progetto>
+    git clone <andreacampus17/SSI-health-files-transfer>
+    cd <nodeServer>
     ```
 
 2.  **Configura il Database PostgreSQL:**
@@ -223,21 +223,23 @@ Per avviare l'intero ecosistema, è necessario avviare ciascun componente separa
 
 ## Struttura del Progetto
 .
+```plaintext
+.
 ├── client/
-│   ├── client_v5.js          # Punto di ingresso del client, logica CLI e API
-│   ├── clientUtils.js        # Utilità per il setup del client (DID, chiavi, ecc.)
-│   ├── ClientCommunication.js # Logica per la comunicazione HTTP con server e resolver
-│   └── ClientFiles/          # Cartella per i file ricevuti dal server (creata dinamicamente)
+│   ├── client_v5.js            # Punto di ingresso del client, logica CLI e API
+│   ├── clientUtils.js          # Utilità per il setup del client (DID, chiavi, ecc.)
+│   ├── ClientCommunication.js  # Logica per la comunicazione HTTP con server e resolver
+│   └── ClientFiles/            # Cartella per i file ricevuti dal server (creata dinamicamente)
 ├── server/
-│   ├── server_v5.js          # Punto di ingresso del server, logica CLI e API
-│   ├── serverSetup.js        # Utilità per il setup del server (DID, chiavi, Express)
-│   ├── registrationManager.js # Logica per la gestione di registrazioni, VC, VP, revoche
-│   └── VerifierFiles/        # Cartella per i file embedded nelle VPs ricevute (creata dinamicamente)
+│   ├── server_v5.js            # Punto di ingresso del server, logica CLI e API
+│   ├── serverSetup.js          # Utilità per il setup del server (DID, chiavi, Express)
+│   ├── registrationManager.js  # Logica per la gestione di registrazioni, VC, VP, revoche
+│   └── VerifierFiles/          # Cartella per i file embedded nelle VPs ricevute (creata dinamicamente)
 ├── resolver/
-│   ├── resolver.js           # Punto di ingresso del resolver, API e interazione DB
-│   └── config.js             # Configurazione del database PostgreSQL
-├── package.json              # Dipendenze e script del progetto
-└── .env                      # Variabili d'ambiente (per il server)
+│   ├── resolver.js             # Punto di ingresso del resolver, API e interazione DB
+│   └── config.js               # Configurazione del database PostgreSQL
+├── package.json                # Dipendenze e script del progetto
+└── .env                        # Variabili d'ambiente (per il server)
 ## Contribuire
 
 Se desideri contribuire a questo progetto, segui queste linee guida:
